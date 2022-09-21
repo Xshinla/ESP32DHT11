@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nhóm 7</title>
+</head>
+<body>
+
+    <!-- tiêu đề -->
+
+    <div class="first">
+        <div class="logo">
+            <img src="../img/Hcmute.png" alt="" class="logo">
+        </div>
+        <div class="first-item">SMART CITY </div>
+    </div>
+
+    <!-- giới thiệu -->
+
+    <div class="introduce">
+        <ul class="nav">
+            <li class="nav-item">Company</li>
+            <li class="nav-item">Solutions</li>
+            <li class="nav-item">Recruitment</li>
+            <li class="nav-item">XshinlaBlog</li>
+        </ul>
+        <ul class="nav">
+            
+            <li class="nav-item">
+                <input class="search" type="search" placeholder="Tìm kiếm......">
+                <button class="tk">TÌM KIẾM</button>
+            </li>
+            <li class="nav-item"><a href="../dangnhap/dangnhap.html" id="xoa">Đăng nhập</a></li>
+        </ul>
+    </div>  
+
+    <!-- ảnh -->
+    <article style="background-image: url('../img/tp.png'); 
+                    background-attachment: fixed;
+                    background-size: 100% 100%;">
+        <div class="show">
+            <div class="shows">
+                <div id="images">
+                            <img src="../img/den_off.jpg" id="den" class="den_off" alt="" ><br>
+                            <div class="images-content">
+                                <button type="button" id="denOn" class="images-btn">ON</button>
+                                <button type="button" id="denOff" class="images-btn">OFF</button>
+                            </div>
+                            
+                </div>
+            </div>
+
+
+            <div class="shows">
+
+                <div class="shows_1">
+
+                    <div class="shows_1_1">
+                        <img src="../img/q.jpg" id="nd" alt="" ><br>
+                        <div class="product__content">
+                            <h2>Nhiệt độ:</h2>
+                            <h2 id="nhietdo"></h2>
+                        </div>
+
+                    </div>    
+
+                    <div class="shows_1_1">
+                        <img src="../img/doam.png" id="da"  alt="" ><br>
+                        <div class="product__content">
+                            <h2>   Độ ẩm:</h2>
+                            <h2 id="doam"></h2>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- thông tin -->
+    <footer>
+            <p><a href="https://www.facebook.com/xuanlam103" class="fa fa-facebook-square">: Xuân Lâm</a></p>
+            <p><a  href="https://www.youtube.com/channel/UC8fQSb0HdW7tM3fcduMDyuw" class="fa fa-youtube-play">: Xshinla</a>
+            <p><a  href="#" class="fa fa-phone">: 0389475795</a>
+    </footer>
+
+    <!-- firebase -->
+    <script src="./functions.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script>
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+    apiKey: "AIzaSyA56MWzNNJV_V-rIDIrPUGNgauWO8PD0ng",
+    authDomain: "iotfirebase-ee64c.firebaseapp.com",
+    databaseURL: "https://iotfirebase-ee64c-default-rtdb.firebaseio.com",
+    projectId: "iotfirebase-ee64c",
+    storageBucket: "iotfirebase-ee64c.appspot.com",
+    messagingSenderId: "741904310320",
+    appId: "1:741904310320:web:dd840e1176d4bb2797cdf5",
+    measurementId: "G-8MPZW1PE54"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    
+    var nhietDo = document.getElementById('nhietdo');
+    var dbRef = firebase.database().ref().child('Nhiet do');
+    var doAm = document.getElementById('doam');
+    var dbRef2 = firebase.database().ref().child('Do am');
+    dbRef.on('value', snap => nhietDo.innerText = snap.val());
+    dbRef2.on('value', snap => doAm.innerText = snap.val());
+ 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.first{
+    min-height: 100px;
+    text-align: center;
+    /* padding-top: 30px; */
+    font-size: 55px;
+    line-height: 90px;
+    font-weight: 700;
+    display: flex;
+    background-color: #f2f2f2;
+}
+
+.first-item{
+    margin: 7px 30px 0 530px;
+    color: #ef5122;
+
+}
+
+.logo{
+    width: 50px;
+    height: 60px;
+    margin: 10px 0 0 15px;
+}
+
+/* giới thiệu */    
+
+.introduce{
+    background-color: #272f54;
+    /* background: #f2f2f2; */
+    min-height: 57px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav{
+    padding-left: 0;
+    margin: auto 16px;
+}
+
+.nav-item{
+    list-style: none;
+    color: #fff;
+    /* color: #333; */
+    margin: 0 15px;
+    display: inline-block;
+    font-size: 25px;
+}
+
+/* nút tìm kiếm */
+.search{
+    font-size: 20px ;
+}
+
+.tk{
+    font-size: 25px;
+    border-radius: 7px;
+}
+
+#xoa{
+    text-decoration: none;
+    color: #fff;
+}
+/* picture */
+
+.show{
+    height: 660px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.shows{
+    margin: 100px ;
+    margin-top: 150px;
+    border-radius: 100px;
+    width: 40%;
+    padding: 2%;
+    float: left;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    margin-left: 50px;
+    height:350px;
+    background: rgba(135, 206, 235, 0.3);
+}
+
+/* lamp ON OFF */
+
+#images{ 
+    max-width: 50px;
+}
+
+#den{
+    width: 200px;
+    height: 200px;
+    margin: 20px 50px 20px 160px;
+}
+
+.images-content{
+    display: flex;
+    margin-top: 10px;
+    
+    margin-left: 120px;
+}
+
+.images-btn{
+    min-width: 100px;
+    text-align: center;
+    margin: 2px 20px 0 20px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#denOn{
+    background: greenyellow;
+}
+
+#denOff{
+    background: #ef5122;
+}
+
+/* nhiet do và do am */
+
+.shows_1{
+    display: flex;
+    justify-content: space-around;
+}
+
+#nd{
+    width: 170px;
+    height: 170px;
+    margin: 20px 50px 20px 50px;
+    /* margin: 20px 10px 20px 30px; */
+}
+
+.product__content{
+    text-align: center;
+    /* padding-left: ; */
+    display: block;
+    width: 170px;
+    height: 40px;
+    background: cornsilk;
+    margin: 15px 20px 0 50px;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 10px;
+    /* line-height: 40px; */
+    display: grid;
+    grid-template-columns: max-content auto;
+    /* grid-template-columns: 120px 50px */
+}
+
+#da{
+    width: 170px;
+    height: 170px;
+    margin: 20px 50px 20px 50px;
+}
+
+/* thông tin */
+
+footer{
+    padding-left: 140px;
+    margin-top: -15px;
+    text-align: center;
+    height: 50px;
+    background: #272f54; 
+    width: 100%;
+}
+footer a{
+    text-decoration: none;
+    color:#fff;
+    padding-left: 30px;
+    line-height: 50px;
+    font-size: 30px;
+    float: left;
+}
+footer .fa {
+    padding: 10px 20px;
+    font-size: 30px;
+    width: 400px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------------ */ 
+
+/* Form đăng nhập */ 
+
+/*  */
+
+
+
+
+
+
+
+
